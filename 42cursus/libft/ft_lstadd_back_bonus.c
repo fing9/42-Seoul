@@ -6,7 +6,7 @@
 /*   By: seongmik <seongmik@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 15:32:47 by seongmik          #+#    #+#             */
-/*   Updated: 2023/03/21 16:45:01 by seongmik         ###   ########.fr       */
+/*   Updated: 2023/03/22 21:07:31 by seongmik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*p;
 
-	if (lst == 0)
+	if (new == 0 || lst == 0)
 		return ;
 	p = *lst;
-	if (p == 0)
+	if (p != 0)
 	{
 		while (p->next != 0)
 		{
@@ -29,6 +29,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	}
 	else
 	{
-		lst = &new;
+		*lst = new;
 	}
 }
