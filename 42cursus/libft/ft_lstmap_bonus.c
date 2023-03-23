@@ -6,7 +6,7 @@
 /*   By: seongmik <seongmik@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 20:24:28 by seongmik          #+#    #+#             */
-/*   Updated: 2023/03/22 21:24:15 by seongmik         ###   ########.fr       */
+/*   Updated: 2023/03/23 17:04:51 by seongmik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			free(lst_ret);
 			return (0);
 		}
+		new_node->content = f(new_node->content);
 		ft_lstadd_back(lst_ret, new_node);
 		lst = lst->next;
 	}
 	ret = *lst_ret;
 	free(lst_ret);
-	ft_lstiter(ret, (void *)(*f));
 	return (ret);
 }

@@ -6,7 +6,7 @@
 /*   By: seongmik <seongmik@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 20:14:05 by seongmik          #+#    #+#             */
-/*   Updated: 2023/03/22 20:20:41 by seongmik         ###   ########.fr       */
+/*   Updated: 2023/03/23 17:47:06 by seongmik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*p;
 	t_list	*tmp;
 
-	if (lst == 0)
+	if (lst == 0 || del == 0)
 		return ;
 	p = *lst;
 	while (p != 0)

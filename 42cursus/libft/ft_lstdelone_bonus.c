@@ -6,7 +6,7 @@
 /*   By: seongmik <seongmik@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 20:11:18 by seongmik          #+#    #+#             */
-/*   Updated: 2023/03/22 20:13:14 by seongmik         ###   ########.fr       */
+/*   Updated: 2023/03/23 17:47:18 by seongmik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (lst == 0 || del == 0)
+		return ;
 	del(lst->content);
 	free(lst);
 }
