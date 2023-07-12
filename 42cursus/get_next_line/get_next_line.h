@@ -6,12 +6,13 @@
 /*   By: seongmik <seongmik@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 18:20:40 by seongmik          #+#    #+#             */
-/*   Updated: 2023/07/12 19:20:07 by seongmik         ###   ########.fr       */
+/*   Updated: 2023/07/12 21:22:24 by seongmik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
+# define BUFFER_SIZE 42
 
 # include <unistd.h>
 # include <stdlib.h>
